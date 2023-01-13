@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/provider/static/css/main.789680b5.css",
+    "main.js": "/provider/static/js/main.9a754b4a.js",
+    "static/media/headerImage.jpg": "/provider/static/media/headerImage.6241bb2d9be6b43032ec.jpg",
+    "static/media/monitor.png": "/provider/static/media/monitor.9bd8de3429b2d209a318.png",
+    "static/media/egg2.png": "/provider/static/media/egg2.9b040e771484810c092b.png",
+    "static/media/window.jpg": "/provider/static/media/window.75dbe188bf648bd91210.jpg",
+    "static/media/Poppins-Medium.ttf": "/provider/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-Bold.ttf": "/provider/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/provider/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
+    "static/media/social.png": "/provider/static/media/social.6fd8e5e8453a458ee3c4.png",
+    "static/media/egg1.png": "/provider/static/media/egg1.6d008ae4d8fdc8866d1b.png",
+    "index.html": "/provider/index.html",
+    "static/media/downloadArrow.svg": "/provider/static/media/downloadArrow.e2aae7a0e78f816be6d03efcd7817eed.svg",
+    "static/media/marker.svg": "/provider/static/media/marker.d8e6e38cecf48edfef2e1272ae0e6154.svg",
+    "main.789680b5.css.map": "/provider/static/css/main.789680b5.css.map",
+    "main.9a754b4a.js.map": "/provider/static/js/main.9a754b4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.789680b5.css",
+    "static/js/main.9a754b4a.js"
+  ]
+}
