@@ -1,0 +1,67 @@
+@import '../../../../functions';
+
+
+$paddingTB: 60px;
+
+.nav__container{
+    padding-top: $paddingTB;
+    padding-bottom: $paddingTB;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 24px;
+    gap: 67px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    min-width: 107px;
+    height: 35px;
+    img{
+        width: 100%;
+    }
+}
+
+.links{
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    gap: 35px;
+}
+
+@media(max-width: 1670px){
+    .nav__container{
+        padding-top: calcFluidFontSize(7, 60, $v-min, $v-max);
+        padding-bottom: calcFluidFontSize(30, 60, $v-min, $v-max);
+        font-size: calcFluidFontSize(12, 24, $v-min, $v-max);
+        gap: calcFluidFontSize(30, 67, $v-min, $v-max);
+    }
+ 
+}
+
+@media(max-width: 950px){
+    .nav__container{
+        flex-wrap: wrap;
+        gap: calcFluidFontSize(10, 30, $v-min, 970) 35px;
+
+    }
+    .links{
+        order: 1;
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 570px){
+    .nav__container{
+        gap: calcFluidFontSize(10, 30, $v-min, 570) 20px;
+    }
+    .logo{
+       width: calcFluidFontSize(150, 320, $v-min, 570);
+       height: calcFluidFontSize(17, 35, $v-min, 570);
+        
+    }
+}
+
+

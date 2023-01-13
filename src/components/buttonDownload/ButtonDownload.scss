@@ -1,0 +1,33 @@
+@import '../../../functions';
+
+$color: #556EE6;
+
+
+.download{
+    border: 2px solid $color;
+    color: $color;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    border-radius: 15px;
+    padding: 11px 57px;  
+    }  
+    .download__arrow{
+        fill: $color;
+        width: 20px;
+        height: 20px;
+ }
+
+ @media(max-width: 1670px){
+    .download{
+    font-size: calcFluidFontSize(12, 24, $v-min, $v-max);
+    line-height: calcFluidFontSize(18, 36, $v-min, $v-max);
+    border-radius: calcFluidFontSize(8, 15, $v-min, $v-max);
+    padding: calcFluidFontSize(5, 11, $v-min, $v-max) calcFluidFontSize(21, 57, $v-min, $v-max);
+
+
+    }
+ }

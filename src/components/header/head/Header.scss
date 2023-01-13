@@ -1,0 +1,127 @@
+@import '../../../../functions';
+
+.header__container{
+    display: flex;
+    padding-left: 205px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    border-radius: 16px;
+    font-family: 'Poppins';
+    color: white;
+    background-image: url('headerImage.jpg');
+    background-size: cover;
+    position: relative;    
+    .img__wrap{
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    img{
+        height: 100%;
+        display: block;
+    }
+}
+
+.header__discription{
+    z-index: 3;
+    max-width: 520px;
+    font-weight: 700;
+    h1{
+        font-size: 55px;
+        text-align: justify;
+    }
+    .detect{
+        color: #2A3042;
+    }
+    .upper{
+        font-size: 64px;
+    }
+    p{
+        font-size: 26px;
+        // width: 340px;
+        padding-right: 17%;
+    }
+    button{
+        margin-top: 45px;
+        margin-bottom: 30px;
+    }
+}
+
+.button__load{
+    padding: 11px 18px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    color: #556EE6;
+  }
+
+@media(max-width: 1670px){
+    .header__container{
+        padding-left: calcFluidFontSize(92, 205, 768, $v-max);
+        padding-top: calcFluidFontSize(34, 80, 768, $v-max);
+        padding-bottom: calcFluidFontSize(34, 100, 768, $v-max);
+    }
+}
+
+@media(max-width: 1550px){
+    $v-max:1550;
+    .header__discription{
+       max-width: calcFluidFontSize(245, 520, 768, $v-max);
+        h1{
+            font-size: calcFluidFontSize(26, 55, 768, $v-max);
+        }       
+        .upper{
+            font-size: calcFluidFontSize(30, 64, 768, $v-max);
+        }
+        p{
+            font-size: calcFluidFontSize(13, 26, 768, $v-max);
+        }
+        button{
+            // margin-top: calcFluidFontSize(34, 100, 768, $v-max);
+            // margin-bottom: calcFluidFontSize(34, 100, 768, $v-max);
+        }
+        .button__load{
+            font-size: 10px;
+            margin-bottom: calcFluidFontSize(15, 24, 768, $v-max);
+            margin-top: calcFluidFontSize(24, 24, 768, $v-max);
+        }
+    }
+}
+
+
+
+@media(max-width: 768px){
+    $v-max:768;
+    .header__discription{
+       min-width: 250px;
+        h1{
+            font-size: 26px;
+        }       
+        .upper{
+            font-size: 30px;
+        }
+        p{
+            font-size: 13px;
+        }
+        button{
+            width: 221px;
+        }
+    }
+    .header__container{
+        padding-bottom: 82px;
+        .img__wrap{
+            width: 60%;
+            height:auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+
+  

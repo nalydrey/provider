@@ -1,0 +1,49 @@
+.tariff{
+    background: #05132D;
+    color: white;
+    font-family: 'Poppins';
+    overflow: hidden;
+    z-index: 1;
+}
+
+.tariff__container{
+    position: relative;
+    h2{
+        text-align: center;
+        font-size: 46px;
+    }
+    h2+p{
+        text-align: center;
+        font-size: 36px;
+    }
+   
+}
+
+.eggs{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+        position: absolute;
+    }
+}
+
+.egg{
+    top: -10%;
+    left: -20%;
+}
+.egg2{
+    bottom: -10%;
+    right: -20%;
+}
+
+.cardBox{
+    color: black;
+   display: flex;
+   justify-content: space-between;
+   padding-top: 40px;
+   padding-bottom: 60px;
+}

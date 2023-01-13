@@ -1,0 +1,22 @@
+@import '../../../functions';
+
+.little__container{
+    max-width: 1250px;
+    margin: 0 auto;
+    border-radius: 35px;
+    border: 1px solid black;
+  }
+
+
+  @media(max-width: 1250px){
+    $v-max: 1250;
+    $v-min: 768;
+    .little__container{
+        border-radius: calcFluidFontSize(16, 35, $v-min, $v-max)
+    }
+  }
+  @media(max-width: 768px){
+    .little__container{
+        border-radius: 15px;
+    }
+  }
