@@ -16,19 +16,19 @@ $paddingTB: 60px;
     align-items: center;
 }
 
+.links__head{
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    gap: 35px;
+}
+
 .logo{
     min-width: 107px;
     height: 35px;
     img{
         width: 100%;
     }
-}
-
-.links{
-    display: flex;
-    flex-grow: 1;
-    justify-content: end;
-    gap: 35px;
 }
 
 @media(max-width: 1670px){
@@ -40,6 +40,18 @@ $paddingTB: 60px;
     }
  
 }
+
+@media(max-width: 1550px){
+    .links__head{
+        .button__load{
+            margin-bottom: calcFluidFontSize(15, 24, 768, $v-max);
+            margin-top: calcFluidFontSize(24, 24, 768, $v-max);
+        }
+    }
+
+}
+
+
 
 @media(max-width: 950px){
     .nav__container{

@@ -14,6 +14,8 @@
   font-weight: 800;
 }
 
+
+
 *{
   margin: 0;
   padding: 0;
@@ -36,6 +38,21 @@ a{
   padding: 0 15px;
 }
 
+button{
+  cursor: pointer
+}
 
+::-webkit-scrollbar{
+  width: 15px;
+  height: 15px;
+}
 
+::-webkit-scrollbar-track{
+  background-color: rgba(94, 107, 120, 0.326);
+}
 
+::-webkit-scrollbar-thumb{
+  background-color: grey;
+  border-radius: 10px;
+  border: 3px solid rgb(94, 11, 104)
+}

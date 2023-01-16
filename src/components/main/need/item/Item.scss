@@ -1,0 +1,86 @@
+@import '../../../../../functions';
+
+.item__container{
+    background: #DADFF2;
+    font-family: 'Poppins';
+    border-radius: 35px;
+    // width: 100%;
+    display: flex;
+    border: 1px solid #DADFF2;
+}
+
+.item__label{
+    flex-shrink: 0;
+    width: 111px;
+    height: 111px;
+    border-radius: 35px;
+    background-color: #556EE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        width: 70%
+    }
+}
+
+.item__discription{
+    padding: 35px 25px;
+    flex-shrink: 1;
+    h3{
+        margin-bottom: 18px;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+
+
+@media(max-width: 1200px){
+    $v-min: 768;
+    $v-max: 1200;
+    $size: calcFluidFontSize(50, 111, $v-min, $v-max);
+    .item__label{
+        flex-shrink: 0;
+        width: $size;
+        height: $size;
+        border-radius: calcFluidFontSize(15, 35, $v-min, $v-max);
+      
+    }
+
+    .item__discription{
+        padding: calcFluidFontSize(16, 35, $v-min, $v-max) calcFluidFontSize(15, 25, $v-min, $v-max);
+        flex-shrink: 1;
+        h3{
+            margin-bottom: calcFluidFontSize(8, 15, $v-min, $v-max);
+            font-size: calcFluidFontSize(15, 28, $v-min, $v-max);
+        }
+        p{
+            font-size: calcFluidFontSize(12, 18, $v-min, $v-max);
+        }
+    }
+}
+
+@media(max-width: 768px){
+    $size: 50px;
+    .item__label{
+        flex-shrink: 0;
+        width: $size;
+        height: $size;
+        border-radius: 15px;
+      
+    }
+
+    .item__discription{
+        padding: 16px 15px;
+        flex-shrink: 1;
+        h3{
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}

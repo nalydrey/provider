@@ -1,3 +1,5 @@
+@import '../../../../functions';
+
 .tariff{
     background: #05132D;
     color: white;
@@ -20,6 +22,8 @@
 }
 
 .eggs{
+    animation: egg1 500s linear infinite alternate;
+
     z-index: -1;
     position: absolute;
     top: 0;
@@ -31,6 +35,15 @@
     }
 }
 
+@keyframes egg1{
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    100%{
+        transform: rotate(3600deg) scale(.2);
+
+    }
+}
 .egg{
     top: -10%;
     left: -20%;
@@ -40,10 +53,54 @@
     right: -20%;
 }
 
+
+
+
 .cardBox{
     color: black;
    display: flex;
    justify-content: space-between;
    padding-top: 40px;
    padding-bottom: 60px;
+}
+
+
+@media(max-width: 1650px){
+    $v-min: 768;
+    $v-max: 1650;
+
+    .tariff__container{
+        h2{
+            font-size: calcFluidFontSize(18, 46, $v-min, $v-max);
+        }
+        h2+p{
+            font-size: calcFluidFontSize(14, 36, $v-min, $v-max);
+        }
+       
+    }
+
+    .cardBox{
+       padding-top: calcFluidFontSize(15, 40, $v-min, $v-max);
+       padding-bottom: calcFluidFontSize(25, 60, $v-min, $v-max);
+    }
+}
+@media(max-width:768px){
+   
+
+    .tariff__container{
+        h2{
+            font-size: 18px;
+        }
+        h2+p{
+            font-size: 14px;
+        }
+       
+    }
+
+    .cardBox{
+        overflow-x: scroll;
+       max-width: 768px;
+       padding-top: 15px;
+       padding-bottom: 25px;
+    }
 }

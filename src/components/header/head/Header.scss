@@ -48,14 +48,6 @@
     }
 }
 
-.button__load{
-    padding: 11px 18px;
-    border-radius: 15px;
-    border: none;
-    font-weight: 700;
-    font-size: 24px;
-    color: #556EE6;
-  }
 
 @media(max-width: 1670px){
     .header__container{
@@ -81,11 +73,6 @@
         button{
             // margin-top: calcFluidFontSize(34, 100, 768, $v-max);
             // margin-bottom: calcFluidFontSize(34, 100, 768, $v-max);
-        }
-        .button__load{
-            font-size: 10px;
-            margin-bottom: calcFluidFontSize(15, 24, 768, $v-max);
-            margin-top: calcFluidFontSize(24, 24, 768, $v-max);
         }
     }
 }

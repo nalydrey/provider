@@ -1,0 +1,116 @@
+@import '../../../../functions';
+
+$background: #556EE6;
+$hover: lighten($background, 10%);
+
+.imprint__container{
+    font-family: 'Poppins';
+    h2{
+        font-size: 46px;
+        margin-top: 32px;
+        margin-bottom: 50px;
+    }
+}
+
+.accordion{
+    display: flex;
+    gap: 10px;
+}
+
+.accordion__buttons{
+    flex-shrink: 0;
+    flex-basis: 267px;
+    font-size: 28px;    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.accordion__button{
+    transition: .2s;
+    font-size: 28px;
+    padding: 25px;
+    border-radius: 25px;
+    border: 1px solid #DADFF2;
+}
+
+.accordion__button:hover{
+    background-color: $hover;
+}
+.accordion__button--active{
+    background-color: $background;
+    color: white;
+}
+.accordion__button--active:hover{
+    color: black;
+}
+
+.accordion__display{
+    transition: 1s;
+    flex-grow: 1;
+    padding: 42px;
+    background-color: $background;
+    color: white;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+@media (max-width: 1250px){
+    $v-min: 768;
+    $v-max: 1250;
+    .imprint__container{
+        h2{
+            font-size: calcFluidFontSize(18, 46, $v-min, $v-max);
+            margin-top: 0;
+            margin-bottom: calcFluidFontSize(18, 50, $v-min, $v-max);
+        }
+    }
+    .accordion__buttons{
+        flex-shrink: 0;
+        flex-basis: calcFluidFontSize(147, 267, $v-min, $v-max);
+        font-size: calcFluidFontSize(12, 28, $v-min, $v-max);    
+        gap: calcFluidFontSize(4, 8, $v-min, $v-max); 
+    }
+
+    .accordion__button{
+        font-size: calcFluidFontSize(12, 28, $v-min, $v-max);
+        padding: calcFluidFontSize(10, 25, $v-min, $v-max);
+        border-radius: calcFluidFontSize(11, 25, $v-min, $v-max);
+    }
+
+    .accordion__display{
+        padding: calcFluidFontSize(18, 42, $v-min, $v-max);
+        border-radius: calcFluidFontSize(11, 25, $v-min, $v-max);
+        font-size: calcFluidFontSize(11, 18, $v-min, $v-max);
+    }
+}
+
+
+@media (max-width: 768px){
+    $v-min: 768;
+    $v-max: 360;
+    .imprint__container{
+        h2{
+            font-size: calcFluidFontSize(14, 18, $v-min, $v-max);
+            margin-top: 0;
+            margin-bottom: calcFluidFontSize(24, 18, $v-min, $v-max);
+        }
+    }
+    .accordion__buttons{
+        flex-shrink: 0;
+        font-size: 12px ;  
+        gap: 4px;
+    }
+
+    .accordion__button{
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 11px;
+    }
+
+    .accordion__display{
+        padding: calcFluidFontSize(11, 18, $v-min, $v-max);
+        border-radius: 11px;
+        font-size: calcFluidFontSize(9, 11, $v-min, $v-max);
+    }
+}

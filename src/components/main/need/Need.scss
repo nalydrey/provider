@@ -1,0 +1,46 @@
+@import '../../../../functions';
+
+
+.need__container{
+    h2{
+        margin-bottom: 40px;
+        font-size: 46px;
+        font-weight: 700;
+    }
+}
+
+.need__box{
+    display: grid;
+    gap: 8px 38px;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+@media(max-width: 1200px){
+    $v-min: 768;
+    $v-max: 1200;
+    .need__container{
+        h2{
+            margin-bottom: calcFluidFontSize(20, 40, $v-min, $v-max) ;
+            font-size: calcFluidFontSize(20, 46, $v-min, $v-max) ;
+        }
+    }
+    
+    .need__box{
+        gap:calcFluidFontSize(3, 8, $v-min, $v-max) calcFluidFontSize(20, 38, $v-min, $v-max);
+    }
+}
+@media(max-width: 768px){
+   
+    .need__container{
+        h2{
+            margin-bottom: 20px ;
+            font-size: 20px ;
+        }
+    }
+    
+    .need__box{
+        grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+        gap:5px;
+    }
+}

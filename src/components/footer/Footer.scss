@@ -1,0 +1,132 @@
+@import '../../../functions';
+
+.footer{
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(122.66deg, #08152D 30.47%, #0E2042 73.2%);
+}
+
+.footer__container{
+    z-index: 5;
+
+    padding-top: 35px;
+    padding-bottom: 84px;
+    position: relative;
+    // background-image: url(./egg2.png);
+    background-repeat: no-repeat;
+    background-position: 200% 100%;
+    h3{
+        margin-bottom: 25px;
+        font-size: 32px;
+    }
+    nav{
+        max-width: 250px;
+        font-size: 24px;
+    }
+}
+
+.footer__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 52px;
+}
+
+.links__footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 100px));
+    flex-grow: 1;
+    // justify-content: end;
+    gap: 15px 35px;
+    position: relative;
+}
+
+.footer__logo{
+    width: 358px;
+    position: absolute;
+    right: 0;
+    img{
+        width: 100%;
+    }
+}
+
+@keyframes egg3{
+    0%{
+        transform: translate(0) rotate(-5deg);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+.egg__wrap{
+    position: absolute;
+    right: -30%;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-5deg);
+    animation: egg3 30s linear infinite alternate;
+}
+
+
+
+
+@media(max-width: 1250px){
+    $v-min: 768;
+    $v-max: 1250;
+    .footer__logo{
+        width: calcFluidFontSize(161, 358, $v-min, $v-max);
+    }
+    .footer__container{
+        padding-top: calcFluidFontSize(17, 35, $v-min, $v-max);
+        padding-bottom: calcFluidFontSize(17, 84, $v-min, $v-max);
+        h3{
+            margin-bottom: calcFluidFontSize(10, 25, $v-min, $v-max);
+            font-size: calcFluidFontSize(14, 32, $v-min, $v-max);
+        }
+        nav{
+            // max-width: calcFlucalcFluidFontSizeidSize($f-min, 250, $v-min, $v-max);
+            font-size: calcFluidFontSize(12, 24, $v-min, $v-max);
+        }
+    }    
+    .footer__buttons{
+        margin-top: calcFluidFontSize(41, 52, $v-min, $v-max);
+    }
+    .links__footer{
+        gap: calcFluidFontSize(9, 15, $v-min, $v-max) calcFluidFontSize(0, 35, $v-min, $v-max);
+    }
+}
+@media(max-width: 768px){
+    $v-min: 360;
+    $v-max: 768;
+    .footer__logo{
+        width: calcFluidFontSize(179, 161, $v-min, $v-max);
+    }
+    .footer__container{
+        padding-top: calcFluidFontSize(10, 17, $v-min, $v-max);
+        padding-bottom: 17px;
+        h3{
+            margin-bottom: calcFluidFontSize(20, 10, $v-min, $v-max);
+            font-size: 14px
+        }
+        nav{
+            // max-width: calcFlucalcFluidFontSizeidSize($f-min, 250, $v-min, $v-max);
+            font-size: 14px
+        }
+    }    
+    .footer__buttons{
+        margin-top: calcFluidFontSize(37, 41, $v-min, $v-max);
+    }   
+}
+
+@media(max-width: 430px){
+    .links__footer{
+        grid-template-columns: 1fr;
+        gap: 15px
+    }
+    .footer__buttons{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

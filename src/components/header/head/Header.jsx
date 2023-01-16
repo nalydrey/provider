@@ -1,6 +1,7 @@
 import React from 'react'
 import monitor from '../head/monitor.png'
 import './Header.scss'
+import ButtonUpload from '../../buttonUpload/ButtonUpload'
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         <div className='header__discription'>
             <h1><span className='detect'>Антидетект</span> Браузер <span className='upper'>MULTIACCOUNT</span></h1>
             <p>Неограниченое кол-во профилей без бана!</p>
-            <button className='button__load'>Загрузить браузер для Windows </button>
+            <ButtonUpload/>
             <p>Лучшая защита от отслеживаний на сайтах</p>
         </div>
         <div className='img__wrap'>

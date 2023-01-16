@@ -2,6 +2,7 @@ import React from 'react'
 import Card from '../card/Card'
 import egg from './egg1.png'
 import eg from './egg2.png'
+import cardInfo from '../../../data/dataCard'
 import './Cards.scss'
 
 const Cards = () => {
@@ -15,10 +16,7 @@ const Cards = () => {
             <h2>Тарифы</h2>
             <p>Тест на 24 часа бесплатно при регестрации в браузере</p>
             <div className='cardBox'>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+              {cardInfo.map((card, i)=><Card data={card} key={i}/>)}
             </div>
         </div>
     </section>

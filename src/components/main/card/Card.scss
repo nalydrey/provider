@@ -1,3 +1,5 @@
+@import '../../../../functions';
+
 .card{
     font-family: 'Poppins';
     padding: 34px 26px 56px;
@@ -31,11 +33,16 @@
     text-align: center;
 }
 .card__button{
+    transition: .3s;
     padding: 10px 45px;
     border-radius: 10px;
     background: #556EE6;
     border: none;
     color: white;
+}
+
+.card__button:hover{
+    background-color:#344fd7;
 }
 
 .card__list{
@@ -55,4 +62,88 @@
 li:hover .marker{
     fill: green;
     stroke: green;
+}
+
+
+@media(max-width: 1650px){
+    $v-min: 768;
+    $v-max: 1650;
+
+    .card{
+        padding: calcFluidFontSize(13, 34, $v-min, $v-max)  calcFluidFontSize(10, 36, $v-min, $v-max)  calcFluidFontSize(30, 56, $v-min, $v-max) ;
+        border-radius: calcFluidFontSize(15, 35, $v-min, $v-max) ;
+        width: calcFluidFontSize(160, 355, $v-min, $v-max) ;
+        h3{
+            font-size: calcFluidFontSize(12, 18, $v-min, $v-max) ;
+        }
+        li{
+            gap: calcFluidFontSize(5, 10, $v-min, $v-max) ;
+        }
+    }
+
+    .card__date{
+        font-size: calcFluidFontSize(10, 18, $v-min, $v-max)  ;
+    }
+    .card__price{
+        font-size: calcFluidFontSize(20, 46, $v-min, $v-max) ;
+        margin-top: calcFluidFontSize(25, 56, $v-min, $v-max) ;
+        margin-bottom: calcFluidFontSize(18, 34, $v-min, $v-max) ;
+    }
+    
+   
+    .card__button{
+        padding: calcFluidFontSize(5, 10, $v-min, $v-max)  calcFluidFontSize(15, 45, $v-min, $v-max) ;
+        border-radius: calcFluidFontSize(5, 10, $v-min, $v-max) ;
+    }
+    
+    .card__list{
+        margin-top: calcFluidFontSize(25, 55, $v-min, $v-max) ;
+        gap: calcFluidFontSize(10, 25, $v-min, $v-max) ;
+        font-size: calcFluidFontSize(8, 16, $v-min, $v-max) ;
+    }
+}
+@media(max-width: 768px){
+   
+
+    .card{
+        margin-right: 20px;
+        flex-grow: 1;
+        gap: 10px;
+        min-width: 160px;
+        padding: 13px  10px  30px ;
+        border-radius: 15px ;
+        width: 160px ;
+        h3{
+            font-size: 12px ;
+        }
+        li{
+            gap: 5px ;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    .card__date{
+        font-size: 10px  ;
+    }
+    .card__price{
+        font-size: 20px ;
+        margin-top: 25px ;
+        margin-bottom: 18px ;
+    }
+    
+   
+    .card__button{
+        padding: 5px  15px ;
+        border-radius: 5px ;
+    }
+
+    
+    
+    .card__list{
+        margin-top: 25px ;
+        gap: 10px ;
+        font-size: 8px ;
+    }
 }
